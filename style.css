@@ -17,7 +17,7 @@ html, body{
     position: fixed;
     background-color: rgb(167, 79, 255);
     border-radius: 50%;
-    z-index: 9;
+    z-index: 8;
     mix-blend-mode: difference;
     transition: left linear 0.1s top linear 0.1s;
 }
@@ -28,6 +28,8 @@ html, body{
 .page1{
     min-height: 100vh;
     width: 100%;
+    position: relative;
+    z-index: 9;
 }
 
 /* navbar */
@@ -40,6 +42,7 @@ html, body{
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    
 }
 
 #nav img{
@@ -107,6 +110,8 @@ html, body{
     width: 100%;
     padding: 100px 5vw;
     border-bottom: 2px solid plum;
+    position: relative;
+    z-index: 9;
 }
 
 .page2 h1{
@@ -170,6 +175,7 @@ html, body{
     background-color: #000;
     position: relative;
     padding-top: 100px;
+    z-index: 9;
 }
 
 .page3 h1{
@@ -195,4 +201,71 @@ html, body{
 .page3-part1 video{
     height: 400px;
     width: 400px;
+}
+
+
+/* page 4 */
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 9;
+    position: relative;
+    padding: 100px;
+}
+
+.elem{
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.elem h1{
+    font-size: 7.3vw;
+    transition: all ease-out 0.5s;
+}
+
+.text-div{
+    /* background-color: lightcyan; */
+    height: 145px;
+    overflow: hidden;
+}
+
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+
+}
+
+.elem img:nth-child(1){
+    left: -2%;
+}
+.elem img:nth-child(3){
+    right: 5%;
+}
+
+
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: blueviolet;
+}
+
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0);
+
+}
+
+
+/* page 5 */
+
+.page5{
+    
+    min-height: 100vh;
+    width: 100%;
+    background-color: darkslateblue;
 }
