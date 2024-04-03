@@ -9,8 +9,18 @@
 html, body{
     height: 100%;
     width: 100%;
+    cursor: none;
 }
-
+.cursor{
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    background-color: rgb(167, 79, 255);
+    border-radius: 50%;
+    z-index: 9;
+    mix-blend-mode: difference;
+    transition: left linear 0.1s top linear 0.1s;
+}
 .main{
     background-color: #0f0d0d;
 }
@@ -93,9 +103,10 @@ html, body{
 
 
 .page2{
-    min-height: 130vh;
+    min-height: 60vh;
     width: 100%;
     padding: 100px 5vw;
+    border-bottom: 2px solid plum;
 }
 
 .page2 h1{
@@ -103,6 +114,7 @@ html, body{
     font-weight: 300;
     margin-top: 3vh;
     margin-left: 2vw;
+    color: #000;
 }
 
 .page2-container{
@@ -124,6 +136,8 @@ html, body{
 .page2-left h2{
     font-size: 3vw;
     font-weight: 200;
+    color: #000;
+    line-height: 3vw;
     
 }
 
@@ -135,6 +149,7 @@ html, body{
 
 .page2-right p{
     font-size: 1.6vw;
+    color: #000;
 }
 
 .page2-right button{
@@ -144,4 +159,40 @@ html, body{
     padding: 4px 0;
     background-color: tomato;
     margin-top: 1vh;
+}
+
+
+/* page 3 */
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    padding-top: 100px;
+}
+
+.page3 h1{
+    font-size: 6.8vw;
+    font-weight: 300;
+    margin-left: 100px;
+}
+
+.page3-part1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
+
+.page3-part1 img{
+    height: 400px;
+    margin-top: 120px;
+    object-fit: cover;
+}
+
+.page3-part1 video{
+    height: 400px;
+    width: 400px;
 }

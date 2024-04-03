@@ -28,6 +28,19 @@ ScrollTrigger.refresh();
 
 init()
 
+var crsr = document.querySelector(".cursor");
+var main = document.querySelector(".main");
+
+main.addEventListener("mousemove", function(dets) {
+  crsr.style.left = dets.x + "px";
+  crsr.style.top = dets.y + "px";
+});
+
+
+
+
+
+
 var tl = gsap.timeline({
     scrollTrigger:{
         trigger:".page1 h1",
@@ -49,3 +62,17 @@ tl.to(".page1 h2",{
 tl.to(".page1 video",{
     width:"90%"
 },"anim")
+
+var tl = gsap.timeline({
+  scrollTrigger:{
+      trigger:".page1 h1",
+      scroller:".main",
+      start:"top -110%",
+      end:"top -115",
+      scrub:3
+  }
+})
+
+.to(".main",{
+  backgroundColor:"#fff",
+})
